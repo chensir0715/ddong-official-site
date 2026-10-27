@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="DDONG运动，全运动服务平台。连接运动场馆、教练与消费者，以场景化服务和 AI 辅助运营提升运动服务连接效率。">
+  <title>DDONG运动 — 让每一种运动，更容易发生</title>
+  <style>
+    :root{--bg:#10110f;--panel:#181a17;--text:#f4f5ef;--muted:#a8ada3;--line:#30342d;--lime:#c7ff3d;--max:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:850;letter-spacing:.04em}.mark{width:34px;height:34px;background:var(--lime);color:#10110f;border-radius:10px;display:grid;place-items:center;font-size:17px;font-weight:950;transform:skew(-8deg)}
+    .navlinks{display:flex;align-items:center;gap:28px;color:#d3d7ce;font-size:14px}.navlinks a:hover{color:var(--lime)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:8px;font-weight:750;font-size:14px;transition:.2s}
+    .nav-cta,.btn.primary{background:var(--lime);color:#11140a}.nav-cta:hover,.btn.primary:hover{background:#dcff82;transform:translateY(-1px)}.btn.secondary{border:1px solid #60665b;color:var(--text)}.btn.secondary:hover{border-color:var(--lime);color:var(--lime)}
+    .hero{padding:94px 0 72px;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;width:520px;height:520px;right:-150px;top:25px;border:1px solid #c7ff3d20;border-radius:50%;box-shadow:0 0 0 60px #c7ff3d08,0 0 0 120px #c7ff3d05;pointer-events:none}
+    .eyebrow{display:flex;align-items:center;gap:10px;text-transform:uppercase;font-size:12px;letter-spacing:.16em;color:var(--lime);font-weight:800}.dot{width:7px;height:7px;background:var(--lime);border-radius:50%;box-shadow:0 0 15px #c7ff3d}
+    h1{font-size:clamp(44px,7.5vw,88px);line-height:1.04;letter-spacing:-.055em;max-width:850px;margin:24px 0 22px;font-weight:900}h1 em{font-style:normal;color:var(--lime)}.lead{font-size:18px;color:#b9beb4;max-width:650px;line-height:1.85}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .hero-bottom{margin-top:76px;display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.hero-panel{border:1px solid var(--line);background:linear-gradient(130deg,#20231c,#151713);border-radius:16px;padding:26px;min-height:210px;position:relative;overflow:hidden}.hero-panel h3{font-size:21px;margin:8px 0}.hero-panel p{color:var(--muted);font-size:14px;max-width:420px}.hero-panel .number{font-size:11px;color:var(--lime);letter-spacing:.16em;font-weight:800}.rings{position:absolute;width:180px;height:180px;right:-30px;bottom:-70px;border:1px solid #c7ff3d66;border-radius:50%;box-shadow:0 0 0 24px #c7ff3d0a,0 0 0 48px #c7ff3d0a}.snow-tag{display:inline-flex;padding:7px 10px;border:1px solid #c7ff3d60;border-radius:5px;color:var(--lime);font-size:12px;font-weight:750}
+    section{padding:82px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:32px}.kicker{font-size:12px;color:var(--lime);letter-spacing:.14em;font-weight:850}.section-head h2{font-size:clamp(30px,4.3vw,48px);line-height:1.12;letter-spacing:-.04em;margin:10px 0 0}.section-head p{max-width:460px;color:var(--muted);margin:0;font-size:15px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px;min-height:228px}.icon{width:44px;height:44px;display:grid;place-items:center;border:1px solid #c7ff3d55;color:var(--lime);border-radius:10px;font-size:21px}.card h3{margin:22px 0 8px;font-size:20px}.card p{color:var(--muted);font-size:14px;margin:0}.card .smalltag{margin-top:20px;color:#dce2d5;font-size:12px}
+    .product{display:grid;grid-template-columns:.85fr 1.15fr;gap:30px;align-items:stretch}.product-copy{padding:30px 0}.product-copy h2{font-size:clamp(32px,4vw,50px);line-height:1.1;letter-spacing:-.04em;margin:14px 0 18px}.product-copy p{color:var(--muted)}.ticks{padding:0;list-style:none;margin:26px 0}.ticks li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:12px;color:#e3e7df;font-size:14px}.ticks li:before{content:"↗";color:var(--lime);font-weight:900}
+    .product-visual{background:radial-gradient(ellipse at 75% 30%,#35451a 0%,#1a2015 33%,#151713 70%);border:1px solid var(--line);border-radius:18px;min-height:390px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}.visual-top{display:flex;justify-content:space-between;color:#b6c0a7;font-size:12px;letter-spacing:.12em}.big-word{font-size:clamp(44px,7vw,80px);font-weight:950;letter-spacing:-.08em;line-height:.92;position:relative;z-index:1}.big-word span{color:var(--lime)}.visual-orbit{position:absolute;width:360px;height:360px;border:1px solid #c7ff3d45;border-radius:50%;right:-100px;top:40px;box-shadow:0 0 0 36px #c7ff3d08,0 0 0 72px #c7ff3d07}.visual-bottom{display:flex;justify-content:space-between;gap:15px;color:#c6ccbE;font-size:12px;position:relative;z-index:1}
+    .season{background:#c7ff3d;color:#11140a;border-radius:18px;padding:clamp(28px,5vw,54px);display:grid;grid-template-columns:1fr .65fr;gap:30px;align-items:center}.season .kicker{color:#384a11}.season h2{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.05em;margin:12px 0 18px}.season p{max-width:570px;color:#303b1d}.season .btn{background:#11140a;color:#f4f5ef}.season .btn:hover{background:#303b1d}.season-note{border-left:1px solid #6c852d;padding-left:26px}.season-note strong{display:block;font-size:18px;margin-bottom:8px}.season-note span{font-size:14px;color:#394820}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step{border-top:1px solid #6d7465;padding:22px 8px 0 0}.step .n{font-size:12px;color:var(--lime);font-weight:850;letter-spacing:.15em}.step h3{font-size:20px;margin:14px 0 8px}.step p{font-size:14px;color:var(--muted);margin:0}
+    .contact{display:grid;grid-template-columns:1fr .8fr;gap:30px;background:#171915;border:1px solid var(--line);border-radius:18px;padding:clamp(24px,4vw,44px)}.contact h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.04em;margin:12px 0}.contact p{color:var(--muted);max-width:500px}.contact-box{border:1px dashed #656d5b;border-radius:12px;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:10px}.contact-box small{color:var(--muted)}.placeholder{font-size:13px;color:#dce6cb;background:#25291f;padding:10px;border-radius:6px}
+    footer{padding:28px 0 38px;border-top:1px solid #ffffff12;color:#8f9689;font-size:12px}.footrow{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footbrand{color:#f4f5ef;font-weight:800}.legal{margin-top:16px;max-width:850px;line-height:1.8}.legal a{text-decoration:underline;text-underline-offset:3px}
+    @media(max-width:760px){.wrap{width:min(100% - 28px,var(--max))}.nav{height:66px}.navlinks{gap:13px}.navlinks a:not(.nav-cta){display:none}.nav-cta{padding:10px 12px;font-size:12px}.hero{padding:68px 0 48px}.hero-bottom,.product,.season,.contact{grid-template-columns:1fr}.hero-bottom{margin-top:46px}.hero-panel{min-height:180px}.section-head{display:block}.section-head p{margin-top:15px}.grid3,.steps{grid-template-columns:1fr}.card{min-height:unset}.product-visual{min-height:320px}.season-note{border-left:0;border-top:1px solid #6c852d;padding:20px 0 0}.contact{gap:20px}section{padding:62px 0}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#top" aria-label="DDONG运动首页"><span class="mark">D</span><span>DDONG <span style="color:var(--lime)">运动</span></span></a>
+    <nav class="navlinks" aria-label="主导航">
+      <a href="#platform">平台能力</a><a href="#partners">合作对象</a><a href="#snow">滑雪季</a><a class="nav-cta" href="#contact">商务合作 ↗</a>
+    </nav>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div class="eyebrow"><span class="dot"></span> ALL SPORTS · ONE CONNECTED EXPERIENCE</div>
+      <h1>让每一种运动，<br><em>更容易发生。</em></h1>
+      <p class="lead">DDONG运动，面向全运动场景的服务平台。连接运动场馆、教练与消费者，让运动服务的发现、连接与预约更加简单。</p>
+      <div class="actions"><a class="btn primary" href="#partners">探索合作机会 ↗</a><a class="btn secondary" href="#platform">了解平台能力 ↓</a></div>
+      <div class="hero-bottom">
+        <div class="hero-panel"><div class="number">01 / FOR THE ECOSYSTEM</div><h3>让运动服务连接起来</h3><p>从场馆、教练到运动消费者，围绕真实运动场景建立更清晰的服务连接。</p><div class="rings"></div></div>
+        <div class="hero-panel"><span class="snow-tag">首期场景 · 滑雪季</span><h3>从一个场景开始，<br>连接更多运动可能。</h3><p>以滑雪服务为首期切入，逐步探索更多运动品类与服务场景。</p></div>
+      </div>
+    </div>
+
+    <section id="platform">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">PLATFORM CAPABILITIES</div><h2>全运动场景化服务</h2></div><p>不是只服务一种运动，而是围绕不同运动场景，连接服务供给与真实需求。</p></div>
+        <div class="grid3">
+          <article class="card"><div class="icon">⌂</div><h3>场馆经营连接</h3><p>帮助运动场馆展示服务供给、连接教练与消费者，并逐步探索数字化运营工具。</p><div class="smalltag">VENUE · 场馆合作</div></article>
+          <article class="card"><div class="icon">↗</div><h3>教练个人品牌化</h3><p>帮助教练展示专业方向、服务项目与可预约信息，让个人服务更容易被发现。</p><div class="smalltag">COACH · 教练入驻</div></article>
+          <article class="card"><div class="icon">◎</div><h3>消费者便捷预约</h3><p>围绕运动需求发现合适的服务与教练，并通过平台现有服务入口了解预约流程。</p><div class="smalltag">CONSUMER · 运动服务</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:10px">
+      <div class="wrap product">
+        <div class="product-copy"><div class="kicker">SERVICE × TECHNOLOGY</div><h2>让服务更高效，<br>让连接更简单。</h2><p>DDONG运动以运动场景为基础，探索数字化工具与 AI 智能体在运动服务中的应用，帮助服务提供者更清晰地管理服务流程。</p>
+          <ul class="ticks"><li>全运动品类与场景拓展</li><li>场馆、教练、消费者多角色连接</li><li>AI 辅助运营与服务流程探索</li></ul>
+          <a class="btn secondary" href="#contact">洽谈平台合作 ↗</a>
+        </div>
+        <div class="product-visual"><div class="visual-top"><span>DDONG / MOVEMENT NETWORK</span><span>01—∞</span></div><div class="visual-orbit"></div><div class="big-word">MOVE<br><span>YOUR</span><br>WORLD.</div><div class="visual-bottom"><span>场景化服务</span><span>连接 · 预约 · 运营</span><span>ALL SPORTS</span></div></div>
+      </div>
+    </section>
+
+    <section id="partners">
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">BUILT FOR EVERY SIDE</div><h2>与运动生态中的你合作</h2></div><p>选择你的角色，了解 DDONG运动可以共同探索的合作方向。</p></div>
+        <div class="grid3">
+          <article class="card"><div class="icon">01</div><h3>运动场馆</h3><p>探索场馆服务展示、教练资源连接、活动合作及数字化运营场景。</p><div class="smalltag">适合：滑雪场 · 健身房 · 球馆 · 户外场地</div></article>
+          <article class="card"><div class="icon">02</div><h3>运动教练</h3><p>展示个人专业方向与服务内容，探索预约合作和个人品牌建设。</p><div class="smalltag">适合：自由教练 · 兼职教练 · 专项教练</div></article>
+          <article class="card"><div class="icon">03</div><h3>品牌与城市合作伙伴</h3><p>围绕运动赛事、品牌联名、城市运营及运动社群活动，探讨可执行的合作方案。</p><div class="smalltag">适合：运动品牌 · 赛事方 · 城市主理人</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="snow">
+      <div class="wrap">
+        <div class="season">
+          <div><div class="kicker">FIRST SCENE / SNOW SEASON</div><h2>从滑雪季，<br>开启全运动连接。</h2><p>以滑雪场景验证服务供给、教练连接与预约流程。每一次真实合作，都为平台拓展更多运动场景积累经验。</p><div class="actions"><a class="btn" href="#contact">洽谈滑雪合作 ↗</a></div></div>
+          <div class="season-note"><strong>面向滑雪生态开放合作</strong><span>滑雪场馆、教练团队、赛事活动与相关品牌，欢迎联系 DDONG运动共同探索合作方式。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><div><div class="kicker">HOW WE CONNECT</div><h2>从合作到服务</h2></div><p>以清晰、可执行的合作流程，逐步建立稳定的运动服务连接。</p></div>
+        <div class="steps">
+          <div class="step"><div class="n">STEP 01</div><h3>建立联系</h3><p>明确合作方的运动品类、服务区域与合作需求。</p></div>
+          <div class="step"><div class="n">STEP 02</div><h3>确认服务</h3><p>沟通服务内容、预约方式、责任边界与实际执行条件。</p></div>
+          <div class="step"><div class="n">STEP 03</div><h3>推进落地</h3><p>在双方确认的范围内开展合作，并根据真实反馈持续优化。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact">
+          <div><div class="kicker">LET'S MOVE TOGETHER</div><h2>让我们一起，<br>把运动连接起来。</h2><p>如果你是运动场馆、教练、赛事组织方、品牌方或城市合作伙伴，欢迎与 DDONG运动联系。</p></div>
+          <div class="contact-box"><strong>商务合作 / 入驻咨询</strong><small>上线前请替换为真实、有人负责的联系方式。</small><div class="placeholder">商务电话：13220007621</div><div class="placeholder">DDONG运动小程序二维码：待补充真实二维码图片</div><small>当前页面为官网初版模板，二维码和联系信息尚未接入。</small></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap"><div class="footrow"><div class="footbrand">DDONG运动 · 全运动服务平台</div><div>连接场馆 · 连接教练 · 连接运动消费者</div></div><div class="legal">运营主体：北京嘀咚科技有限公司。<br>商务联系：13220007621。<br>法律声明：请根据实际业务补充隐私政策、用户协议及适用的备案信息。此模板不代表已经完成备案或取得任何专项资质。</div></div></footer>
+</body>
+</html>
